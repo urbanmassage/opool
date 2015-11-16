@@ -7,7 +7,6 @@
     "build": "tsc -p .",
     "test": "mocha",
     "pretest": "npm run build",
-    "prepublish": "npm test",
     "coverage": "istanbul cover _mocha --"
   },
   "author": "Louay Alakkad <louay@alakkad.me>",
@@ -16,7 +15,8 @@
     "chai": "^3.4.1",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.4",
-    "mocha-junit-reporter": "^1.9.0"
+    "mocha-junit-reporter": "^1.9.0",
+    "typescript": "^1.6.2"
   },
   "directories": {
     "test": "test"
