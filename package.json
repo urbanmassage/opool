@@ -32,10 +32,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louy/opool.git"
+    "url": "git+https://github.com/urbanmassage/opool.git"
   },
   "bugs": {
-    "url": "https://github.com/louy/opool/issues"
+    "url": "https://github.com/urbanmassage/opool/issues"
   },
-  "homepage": "https://github.com/louy/opool#readme"
+  "homepage": "https://github.com/urbanmassage/opool#readme"
 }
