@@ -3,3 +3,4 @@ node_modules/
 **.map
 **.log
 coverage/
+index.d.ts
