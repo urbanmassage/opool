@@ -1,0 +1,28 @@
+{
+  "name": "opool",
+  "version": "0.0.1",
+  "description": "Simple & super fast object pool for javascript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "mocha"
+  },
+  "author": "Louay Alakkad <louay@alakkad.me>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "keywords": [
+    "object",
+    "pool",
+    "object",
+    "pool",
+    "reuse",
+    "performance"
+  ]
+}
