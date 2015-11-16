@@ -1,5 +1,3 @@
-/// <reference path="typings/tsd.d.ts" />
-
 class Pool<T extends {reset: Function}> {
   private pool: T[];
   private Func: new () => T;
