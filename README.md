@@ -1,6 +1,10 @@
 # OPool
-Simple & super fast object pool for javascript
+[![CircleCI](https://img.shields.io/circleci/project/urbanmassage/opool.svg)](https://circleci.com/gh/urbanmassage/opool)
+[![Codecov](https://img.shields.io/codecov/c/github/urbanmassage/opool.svg)](https://codecov.io/github/urbanmassage/opool)
+[![npm](https://img.shields.io/npm/v/opool.svg)](http://npmjs.com/package/opool)
+[![npm](https://img.shields.io/npm/l/opool.svg)](https://www.npmjs.com/package/opool)
 
+Simple & super fast object pool for javascript
 
 ## Usage
 To create a new pool you just need to provide a constructor function to the exported class.
