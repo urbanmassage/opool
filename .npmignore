@@ -2,3 +2,5 @@ node_modules/
 .vscode/
 typings/
 tsconfig.json
+**.log
+coverage/
