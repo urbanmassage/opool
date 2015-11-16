@@ -24,5 +24,13 @@
     "pool",
     "reuse",
     "performance"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louy/opool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louy/opool/issues"
+  },
+  "homepage": "https://github.com/louy/opool#readme"
 }
