@@ -15,3 +15,4 @@ test:
   override:
     - npm test
     - MOCHA_FILE=$CIRCLE_TEST_REPORTS/test-results.xml npm run coverage -- "--reporter" "mocha-junit-reporter"
+    - cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js

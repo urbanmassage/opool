@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.4.1",
+    "codecov.io": "^0.1.6",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.4",
     "mocha-junit-reporter": "^1.9.0",
