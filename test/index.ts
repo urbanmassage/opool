@@ -1,4 +1,4 @@
-import Pool from '../index';
+import Pool = require('../index');
 import {expect} from 'chai';
 
 describe('Pool', () => {

@@ -20,4 +20,4 @@ class Pool<T extends {reset: Function}> {
   }
 }
 
-export default Pool;
+export = Pool;
