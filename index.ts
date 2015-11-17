@@ -1,8 +1,8 @@
-class Pool<T extends {reset: Function}> {
+class Pool<T> {
   private pool: T[];
-  private Func: new () => T;
+  private Func: Pool.Resettable<T>;
 
-  constructor(Func: new () => T) {
+  constructor(Func: Pool.Resettable<T>) {
     this.pool = [];
     this.Func = Func;
   }
@@ -15,8 +15,17 @@ class Pool<T extends {reset: Function}> {
   }
 
   release(obj: T): void {
-    if (obj.reset) obj.reset();
+    if (this.Func.reset) {this.Func.reset(obj)}
     this.pool.push(obj);
+  }
+}
+
+module Pool {
+  export interface Resettable<T extends Object> {
+    // constructor
+    new (): T;
+    // static
+    reset?(obj: T): void;
   }
 }
 
