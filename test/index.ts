@@ -33,9 +33,18 @@ describe('Pool', () => {
     const pool = new Pool(Test);
 
     const obj = pool.get();
-    pool.release(obj);
-
     const obj2 = pool.get();
-    expect(obj2).to.equal(obj);
+
+    expect(obj2).not.to.equal(obj);
+
+    pool.release(obj);
+    const obj3 = pool.get();
+
+    expect(obj3).to.equal(obj);
+
+    pool.release(obj2);
+    const obj4 = pool.get();
+
+    expect(obj4).to.equal(obj2);
   });
 });
