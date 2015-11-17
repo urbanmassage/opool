@@ -18,10 +18,10 @@ import Pool from 'opool';
 
 class MyClass {
   constructor() {
-    this.reset();
+    MyClass.reset(this);
   }
-  reset() {
-    this.something = null;
+  static reset(obj: MyClass) {
+    obj.something = null;
   }
 }
 
@@ -32,7 +32,7 @@ export default const pool = new Pool(MyClass);
 const obj1 = pool.get(); // returns new MyClass
 const obj2 = pool.get(); // returns new MyClass
 
-pool.release(obj1); // obj1.reset is automatically called here
+pool.release(obj1); // reset() is automatically called here
 
 const obj3 = pool.get(); // obj3 is now identical to obj1
 ```
@@ -42,10 +42,10 @@ const obj3 = pool.get(); // obj3 is now identical to obj1
 var Pool = require('opool');
 
 function MyClass() {
-  this.something = null;
+  MyClass.reset(this);
 }
-MyClass.prototype.reset = function() {
-  this.something = null;
+MyClass.reset = function(obj) {
+  obj.something = null;
 }
 
 var pool = new Pool(MyClass);
