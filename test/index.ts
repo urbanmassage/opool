@@ -5,10 +5,10 @@ describe('Pool', () => {
   class Test {
     test = null;
     construct() {
-      this.reset();
+      Test.reset(this);
     }
-    reset() {
-      this.test = null;
+    static reset(obj: Test) {
+      obj.test = null;
     }
   }
 
@@ -19,7 +19,7 @@ describe('Pool', () => {
     expect(obj).to.be.an.instanceof(Test);
   });
 
-  it('accepts returns unique objects', () => {
+  it('returns unique objects', () => {
     const pool = new Pool(Test);
 
     const obj = pool.get();
@@ -27,6 +27,17 @@ describe('Pool', () => {
     const obj2 = pool.get();
     expect(obj2).to.be.an.instanceof(Test);
     expect(obj2).to.not.equal(obj);
+  });
+
+  it('resets', () => {
+    const pool = new Pool(Test);
+
+    const obj = pool.get();
+    expect(obj).to.have.property('test').that.equals(null);
+    obj.test = 1;
+    expect(obj).to.have.property('test').that.equals(1);
+    pool.release(obj);
+    expect(obj).to.have.property('test').that.equals(null);
   });
 
   it('recycles', () => {
