@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/*.map": true,
+    "*.js": true,
+    "test/*.js": true,
+    "*.d.ts": true,
+    "test/*.d.ts": true,
+    "**/.DS_Store": true
+  }
+}
