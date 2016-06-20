@@ -14,7 +14,7 @@
   "license": "LGPL-3.0",
   "devDependencies": {
     "chai": "^3.4.1",
-    "codecov.io": "^0.1.6",
+    "codecov.io": "^0.1.7",
     "istanbul": "^0.4.2",
     "map-coverage": "0.0.3",
     "mocha": "^2.3.4",
